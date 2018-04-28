@@ -14,10 +14,10 @@ class Welcome extends CI_Controller {
          if ($id == '') {
              $data = $this->db->get('api_table')->result();
          } else {
-             $this->$db->where('API_ID',$id)
+             $this->$db->where('API_ID',$id);
 						 $data = $this->db->get('api_table')->result();
          }
-				 $this->response($data,200);
+				 $this->response($data, 200);
      }
 
      function index_post() {
@@ -61,4 +61,3 @@ class Welcome extends CI_Controller {
      }
 
  }
-}
